@@ -1,0 +1,6 @@
+target/
+catalog-service/target/
+.git/
+.idea/
+*.md
+get-docker.sh
