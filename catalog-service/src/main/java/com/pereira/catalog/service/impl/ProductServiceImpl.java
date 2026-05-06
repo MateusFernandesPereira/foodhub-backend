@@ -78,4 +78,12 @@ public class ProductServiceImpl implements ProductService {
         productRepository.deleteById(id);
     }
 
+    @Override
+    @Transactional
+    public void restoreById(Long id) {
+        int updated = productRepository.restoreById(id);
+        if (updated == 0) {
+            throw new EntityNotFoundException("Deleted product not found with id: " + id);
+        }
+    }
 }
