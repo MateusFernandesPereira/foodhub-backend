@@ -18,4 +18,5 @@ public interface ProductService {
 
     void delete(Long id);
 
+    void restoreById(Long id);
 }

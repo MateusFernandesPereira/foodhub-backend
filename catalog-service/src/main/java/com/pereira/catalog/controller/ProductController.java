@@ -47,4 +47,9 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<Void> restore(@PathVariable Long id) {
+        productService.restoreById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
